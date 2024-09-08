@@ -1,0 +1,28 @@
+.dateSelection{
+  width: calc(100% - 24px);
+	height: 15px;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+}
+.inputDate{
+  width: calc(100% - 32px);
+  font-size: 13px;
+  border: none;
+  outline: none;
+}
+
+.rdtStatic .rdtPicker {
+  border-radius: 20px;
+  position: absolute !important;
+  right: -20px;
+  font-size: 12px;
+}
+.rdtPicker th.rdtNext, 
+.rdtPicker th.rdtPrev {
+  font-size: 15px !important;
+}
+
+.rdtPicker th.rdtSwitch {
+  line-height: 20px;
+}

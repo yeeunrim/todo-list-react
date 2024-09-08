@@ -1,0 +1,66 @@
+.toDoBoxWrapper{
+  display: flex;
+}
+.toDoBox{
+  width: 450px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"] + label{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+input[type="checkbox"]:checked + label::after{
+  content:'✔';
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="checkbox"] + label:hover{
+  transform: scale(1.2);
+}
+
+.toDoBoxMiddle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 320px;
+  height: 100%;
+}
+.toDoBoxRight{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toDoConDate p{
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 12px;
+}
+.toDoTitle{
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.toDoDate{
+  color: #31A425;
+}
