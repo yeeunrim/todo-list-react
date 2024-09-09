@@ -24,21 +24,26 @@
 ## &nbsp;
 <br>
 
-### 02. 프로젝트 실행
+### 02. 프로젝트 실행 
 #### 개발 환경 설정
-##### &nbsp;&nbsp; 리액트 환경 설정
+##### &nbsp;&nbsp; (1) 리액트 환경 설정
 - `npm install create-react-app`으로 create-react-app을 설치<br>
-##### &nbsp;&nbsp; 프로젝트 설정
+##### &nbsp;&nbsp; (2) 프로젝트 설정 
 - `create-react-app $ProjectName`으로 프로젝트 생성<br>
 - `cd $ProjectName`으로 생성된 프로젝트 폴더로 이동<br>
+##### &nbsp;&nbsp; (3) 프로젝트 코드 다운로드
+- `git clone https://github.com/yeeunrim/todo-list-react.git`을 CMD창에 입력해, 코드 다운로드
+##### &nbsp;&nbsp; (4) 라이브러리 설치
 - `npm install react-dom` npm 명령어를 사용해 react-dom 라이브러리 설치<br>
 - `npm install react-icons` npm 명령어를 사용해 react-icons 라이브러리 설치<br>
 - `npm install antd` npm 명령어를 사용해 ant-design 라이브러리 설치<br>
 - `npm install uuid` npm 명령어를 사용해 uuid 라이브러리 설치<br>
 - `npm install react-datetime` npm 명령어를 사용해 react-datetime 라이브러리 설치<br>
-##### &nbsp;&nbsp; 프로젝트 실행 및 배포
+##### &nbsp;&nbsp; (5) 프로젝트 실행 및 배포
 - `npm start` 개발 모드로 애플리케이션을 실행하기 위해 명령어 사용<br>
-- `npm run buid` 으로 프로덕션 빌드 생성해 코드 압축 및 최적화 진행<br>
+##### &nbsp;&nbsp; (6) 참고
+- (1), (2)을 제외 후, (3)부터 바로 진행해도 상관없음
+- 프로젝트 실행에 앞서, Node.js와 npm 설치를 통해 환경설정이 완료되어 있어야 함 
 ## &nbsp;
 <br>
 
