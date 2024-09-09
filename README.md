@@ -27,12 +27,12 @@
 ### 02. 프로젝트 실행
 #### 개발 환경 설정
 ##### &nbsp;&nbsp; 리액트 환경 설정
-- `npm install react react-dom`으로 리액트 환경을 설치하는 npm 명령어 사용<br>
 - `npm install create-react-app`으로 create-react-app을 설치<br>
 ##### &nbsp;&nbsp; 프로젝트 설정
 - `create-react-app $ProjectName`으로 프로젝트 생성<br>
 - `cd $ProjectName`으로 생성된 프로젝트 폴더로 이동<br>
-- `npm install react-dom` npm 명령어를 사용해 react-icons 라이브러리 설치<br>
+- `npm install react-dom` npm 명령어를 사용해 react-dom 라이브러리 설치<br>
+- `npm install react-icons` npm 명령어를 사용해 react-icons 라이브러리 설치<br>
 - `npm install antd` npm 명령어를 사용해 ant-design 라이브러리 설치<br>
 - `npm install uuid` npm 명령어를 사용해 uuid 라이브러리 설치<br>
 - `npm install react-datetime` npm 명령어를 사용해 react-datetime 라이브러리 설치<br>
