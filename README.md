@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📋 To-do-List With React<br>&nbsp;
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+### 01. 프로젝트 설명
+#### 개요
+- 사용자가 해야 할 일을 추가해 일과 생활을 관리할 수 있는 APP
 
-### `npm start`
+#### 개발환경
+- Language : HTML, CSS, JavaScript
+- Framework : React v18.3.1
+- Library : Ant-Design, React-icon, uuid, react-datetime
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 주요 기능
+##### &nbsp;&nbsp; 현재 날짜
+-  Date() 함수를 통해 날짜값을 동적으로 표현
+##### &nbsp;&nbsp; 목록 CRUD
+- useState를 활용해 목록 추가 및 삭제 기능 구현
+##### &nbsp;&nbsp; 목록 필터링
+- 총 3가지 필터링 기능 구현 | 진행중, 기간지남, 완료
+- 드롭다운으로 해당 필터링에 맞는 배열로 상태 변경
+## &nbsp;
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 02. 프로젝트 실행
+#### 개발 환경 설정
+##### &nbsp;&nbsp; 리액트 환경 설정
+- `npm install react react-dom`으로 리액트 환경을 설치하는 npm 명령어 사용<br>
+- `npm install create-react-app`으로 create-react-app을 설치<br>
+##### &nbsp;&nbsp; 프로젝트 설정
+- `create-react-app $ProjectName`으로 프로젝트 생성<br>
+- `cd $ProjectName`으로 생성된 프로젝트 폴더로 이동<br>
+- `npm install react-dom` npm 명령어를 사용해 react-icons 라이브러리 설치<br>
+- `npm install antd` npm 명령어를 사용해 ant-design 라이브러리 설치<br>
+- `npm install uuid` npm 명령어를 사용해 uuid 라이브러리 설치<br>
+- `npm install react-datetime` npm 명령어를 사용해 react-datetime 라이브러리 설치<br>
+##### &nbsp;&nbsp; 프로젝트 실행 및 배포
+- `npm start` 개발 모드로 애플리케이션을 실행하기 위해 명령어 사용<br>
+- `npm run buid` 으로 프로덕션 빌드 생성해 코드 압축 및 최적화 진행<br>
+## &nbsp;
+<br>
 
-### `npm test`
+### 03. 주요 컴포넌트
+#### (1) Main.jsx
+#####  설명
+- 애플리케이션의 핵심적인 로직과 레이아웃을 관리
+- 사용자가 할 일을 관리할 수 있는 화면과 새로운 할 일을 추가하거나 필터링할 수 있는 기능 제공
+##### 사용 이유
+- 모든 하위 컴포넌트 통합
+- 상태 관리(useState)를 통해 주요 기능을 중앙에서 처리
+- 전체 애플리케이션의 흐름을 제어
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### (2) Header.jsx
+##### 설명
+- 페이지의 상단에 위치한 타이틀을 표시
+- 사용자가 New 화면에서 돌아올 때는 타이틀이 동적으로 변경
+##### 사용 이유
+- 사용자가 현재 어떤 페이지에 있는지를 명확히 알 수 있음
+- 동적으로 타이틀을 변경할 수 있는 구조
 
-### `npm run build`
+#### (3) DropDown.jsx
+##### 설명
+- 할 일을 필터링하는 드롭다운 메뉴를 제공
+- 사용자가 필터링 옵션 선택 가능
+##### 사용 이유
+- 할 일 목록을 '진행중', '기간지남', '완료' 상태로 필터링하여 보여주는 기능을 제공
+- 사용자가 쉽게 목록을 탐색할 수 있도록 하는 것
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### (4) Form.jsx
+##### 설명
+- 사용자가 새로운 할 일을 추가할 때 데이터를 입력할 수 있는 폼 제공
+- 제출 시 이 데이터를 상위 컴포넌트로 전달하여 새로운 할 일로 저장
+##### 사용 이유
+- 사용자가 직관적으로 할 일을 입력할 수 있는 폼을 제공
+- 상태 관리(useState)를 사용해 입력 값을 추적하고 제출 후, 폼을 초기화하는 로직을 구현하기 위해 사용
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### (5) ToDoList.jsx
+##### 설명
+- 사용자가 추가한 할 일 목록 중 필터링된 목록을 동적으로 렌더링
+- 할 일의 완료 여부를 관리하는 컴포넌트
+##### 사용 이유
+- 사용자의 할 일 목록을 필터링해서 보여주기 위해 사용
+- 필터 상태에 따라 적절한 하위 컴포넌트인 'Ongoing', 'Missed', 'Completed'로 렌더링
+- 할 일 목록을 체계적으로 관리하기 위한 목적
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### (6) List.jsx
+##### 설명
+- 할 일 목록을 렌더링하여 화면에 보여주는 역할
+- 각각의 할 일 항목에 대한 제목, 내용, 마감일을 표시
+- 체크박스를 통해 할 일 완료 상태를 관리
+##### 사용 이유
+- 할 일 목록을 직관적이고 명확하게 사용자에게 보여주기 위해 사용
+- 체크박스를 제공하여 할 일의 상태(완료 여부)를 쉽게 변경

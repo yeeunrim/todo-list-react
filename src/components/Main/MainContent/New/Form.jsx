@@ -10,7 +10,7 @@ function Form({ onAddTodo }) {
     content: '',
     date: '',
     completed: false, // 새로운 항목은 기본적으로 완료되지 않은 상태로 설정
-    hasDeadline: false // 스위치 상태를 관리
+    hasDeadline: false // 마감 기한 스위치 상태를 관리
   });
 
   // 입력 필드의 변경을 처리하는 함수
@@ -94,6 +94,7 @@ function Form({ onAddTodo }) {
         {formatData.hasDeadline && <DateSelect selectedDate={formatData.date} onDateChange={handleDateChange} />}
       </div>
       <div className="toDoNewBoxInput">
+        {/* 모든 필드가 입력됐을 경우에만 버튼 활성화 */}
         <button className="saveBtn" type="submit" disabled={!isFormValid()}>
           create
         </button>

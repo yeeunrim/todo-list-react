@@ -18,6 +18,7 @@ function Template({ children }) {
   }
 
   return(
+    // 자식에 스타일 공통 적용
     <div style={style.template}>
       {children}
     </div>

@@ -4,12 +4,23 @@ import Header from "./Header/Header";
 import MainContent from "./MainContent/MainContent";
 
 function Main() {
+  // 상태 변경
   // 할 일 추가, 할 일 수정, 할 일 목록 - 상태 변경
   const [viewState, setViewState ] = useState({
     showNew: false,
     showEdit: false,
     showList: true // 기본 상태
   });
+  // 할 일 목록
+  const [todos, setTodos] = useState([]);
+  // 필터링
+  const category = ['ongoing', 'missed', 'completed'];
+  const [filter, setFilter] = useState(category[0]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
+  // 수정 시, 현재 선택 된 할 일
+  const [currentTodo, setCurrentTodo] = useState(null);
+
+
   // 추가 버튼 클릭 시, 상태 변경
   const handlePlusClick = () => {
     setViewState({ showNew: true, showEdit: false, showList: false });
@@ -24,8 +35,7 @@ function Main() {
     setViewState({ showNew: false, showEdit: false, showList: true });
   };
 
-  // 할 일 목록
-  const [todos, setTodos] = useState([]);
+  
   // 할 일 추가 등록
   const handleAddTodo = (newTodo) => {
     setTodos(prevTodos => [...prevTodos, { ...newTodo, id: uuidv4() }]); // 새로운 배열에 저장
@@ -34,9 +44,6 @@ function Main() {
   };
 
   // 필터링
-  const category = ['ongoing', 'missed', 'completed'];
-  const [filter, setFilter] = useState(category[0]);
-  const [filteredTodos, setFilteredTodos] = useState([]);
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
@@ -54,7 +61,6 @@ function Main() {
           return todos;
       }
     };
-  
     setFilteredTodos(getFilteredTodos());
   }, [todos, filter]);
   
@@ -73,9 +79,6 @@ function Main() {
   const handleTodoDelete = (id) => {
     setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
   };
-
-  // 현재 선택 된 할 일
-  const [currentTodo, setCurrentTodo] = useState(null);
 
   return(
     <>

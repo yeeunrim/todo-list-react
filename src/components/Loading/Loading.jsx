@@ -11,6 +11,7 @@ function Loading() {
 
   return(
     <>
+      {/* 3초 후, 로딩이 끝나면 메인 컴포넌트 */}
       {isLoading ? <LoadingWin /> : <Main />}
     </>
   )

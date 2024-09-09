@@ -52,6 +52,7 @@ function List({ todos, onEditClick, onTodoUpdate, onTodoDelete }) {
               </div>
             </div>
             <div className="toDoBoxRight">
+              {/* 기존 할 일 목록을 그대로 전송 */}
               <LuPencil onClick={() => onEditClick(item)} />
               <Popconfirm
                 title="정말로 삭제하시겠습니까?"

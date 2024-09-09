@@ -1,6 +1,6 @@
 import React from "react";
 
-function Layout({ showNew, showEdit, showList, children }) {
+function Layout({ showList, children }) {
   const style = {
     layout: {
       width: "450px",
