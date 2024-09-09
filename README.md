@@ -103,4 +103,4 @@
 <br>
 
 ### 04. 다운로드
-- [Todo-List_프로젝트_설명서.pdf](https://github.com/user-attachments/files/16926561/todolist_manual.pdf) <br>&nbsp;
+- [Todo-List_프로젝트_설명서.pdf](https://github.com/user-attachments/files/16930342/todolist_manual.pdf) <br>&nbsp;
