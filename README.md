@@ -1,6 +1,6 @@
 <br>
 
-# 📋 To-do-List With React<br>&nbsp;
+# 📋 To-do-List With React 
 
 <br>
 
@@ -17,7 +17,7 @@
 ##### &nbsp;&nbsp; 현재 날짜
 -  Date() 함수를 통해 날짜값을 동적으로 표현
 ##### &nbsp;&nbsp; 목록 CRUD
-- useState를 활용해 목록 추가 및 삭제 기능 구현
+- useState, useEffect를 활용해 목록 CRUD 기능 구현
 ##### &nbsp;&nbsp; 목록 필터링
 - 총 3가지 필터링 기능 구현 | 진행중, 기간지남, 완료
 - 드롭다운으로 해당 필터링에 맞는 배열로 상태 변경
@@ -93,3 +93,9 @@
 ##### 사용 이유
 - 할 일 목록을 직관적이고 명확하게 사용자에게 보여주기 위해 사용
 - 체크박스를 제공하여 할 일의 상태(완료 여부)를 쉽게 변경
+## &nbsp;
+<br>
+
+### 04. 다운로드
+- [Todo-List_프로젝트_설명서.pdf](https://github.com/user-attachments/files/16926561/todolist_manual.pdf) <br>&nbsp;
+
