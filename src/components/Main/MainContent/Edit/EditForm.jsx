@@ -4,10 +4,6 @@ import { Switch } from 'antd';
 import DateSelect from "../New/DateSelect";
 
 function EditForm({ todo, onTodoUpdate }) { 
-  // 값 변경 없이 전송했을 때에도 이전의 값을 저장하기 위해 사용
-  // 컴포넌트에 처음 전송했을 때의 값을 저장하는 상태
-  const [initialTodo, setInitialTodo] = useState(todo);
-
   const [title, setTitle] = useState(todo.title || '');
   const [content, setContent] = useState(todo.content || '');
   const [hasDeadline, setHasDeadline] = useState(todo.hasDeadline || false);
@@ -15,9 +11,7 @@ function EditForm({ todo, onTodoUpdate }) {
 
    // todos가 변경되면 상태 업데이트
    useEffect(() => {
-    // todo의 속성이 변경되었을 때에만 상태를 업데이트
     if (todo) {
-      setInitialTodo(todo);
       setTitle(todo.title || '');
       setContent(todo.content || '');
       setHasDeadline(todo.hasDeadline || false);
