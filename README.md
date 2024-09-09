@@ -43,7 +43,8 @@
 - `npm start` 개발 모드로 애플리케이션을 실행하기 위해 명령어 사용<br>
 ##### &nbsp;&nbsp; (6) 참고
 - (1), (2)을 제외 후, (3)부터 바로 진행해도 상관없음
-- 프로젝트 실행에 앞서, Node.js와 npm 설치를 통해 환경설정이 완료되어 있어야 함 
+- 프로젝트 실행에 앞서, Node.js와 npm 설치를 통해 환경설정이 완료되어 있어야 함
+- [Node.js 다운로드](https://nodejs.org/en)
 ## &nbsp;
 <br>
 
@@ -103,4 +104,3 @@
 
 ### 04. 다운로드
 - [Todo-List_프로젝트_설명서.pdf](https://github.com/user-attachments/files/16926561/todolist_manual.pdf) <br>&nbsp;
-
