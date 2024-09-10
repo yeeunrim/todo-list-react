@@ -13,20 +13,13 @@ function Edit({ currentTodo, onTodoUpdate }) {
       alignItems: "center",
       justifyContent: "center"
     },
-    toDoNewBox: {
-      position: "relative",
-      width: "calc(100% - 10%)",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center"
-    },
     toDoNewBoxImg: {
       position: 'absolute',
       top: '-45px',
       right: '30px',
       width: '200px',
     },
-    toDoNewBox: {
+    toDoEditBox: {
       fontFamily: "'Nanum Gothic', sans-serif",
       display: 'flex',
       flexDirection: 'column', 
@@ -42,7 +35,7 @@ function Edit({ currentTodo, onTodoUpdate }) {
   return(
     <div style={style.toDoLeft}>
       <img src={rabbitImage} alt="rabbit" style={style.toDoNewBoxImg} />
-      <div style={style.toDoNewBox}>
+      <div style={style.toDoEditBox}>
         <EditForm todo={currentTodo} onTodoUpdate={onTodoUpdate} />
       </div>
     </div>

@@ -13,13 +13,6 @@ function New({ onAddTodo }) {
       alignItems: "center",
       justifyContent: "center"
     },
-    toDoNewBox: {
-      position: "relative",
-      width: "calc(100% - 10%)",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center"
-    },
     toDoNewBoxImg: {
       position: 'absolute',
       top: '-45px',
